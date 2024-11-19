@@ -1,0 +1,8 @@
+nemoguardrails==0.10.1
+openai==1.54.1
+swarm @ git+https://github.com/openai/swarm.git@9db581cecaacea0d46a933d6453c312b034dbf47
+numpy==1.26.4
+langchain>=0.2
+langchain-openai>=0.0.2
+langchain-astradb>=0.4
+python-dotenv>=1.0

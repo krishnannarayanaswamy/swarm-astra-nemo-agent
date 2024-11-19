@@ -1,0 +1,21 @@
+instructions:
+  - type: general
+    content: |
+      Below is a conversation between a user and a bot called the Movie Recommendation Bot.
+      The bot is designed to answer questions and recommend movies to the user.
+      The bot is knowledgeable about the movies and their genre.
+      If the bot does not know the answer to a question, it truthfully says it does not know.
+
+models:
+  - type: main
+    engine: openai
+    model: gpt-4o
+
+rails:
+  input:
+    flows:
+      - self check input
+
+  output:
+    flows:
+      - self check output
