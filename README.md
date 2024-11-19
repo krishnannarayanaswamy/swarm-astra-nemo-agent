@@ -7,16 +7,27 @@ DataStax Astra Database: Stores movie data and handles vector-based similarity s
 OpenAI Integration: Provides natural language understanding and generation
 NeMo Guardrails: Manages conversation flows and ensures appropriate responses
 Swarm Agent System: Coordinates between different components to handle user queries
+
 Installation
+
 Clone the repository:
-git clone 
+
+git clone https://github.com/krishnannarayanaswamy/swarm-astra-nemo-agent.git
+
 Install the dependencies:
+
 pip install -r requirements.txt
+
 Set up environment variables in a .env file:
+
 OPENAI_API_KEY=your_openai_api_key
+
 ASTRA_DB_APPLICATION_TOKEN=your_astra_token
+
 ASTRA_DB_API_ENDPOINT=your_astra_endpoint
+
 ASTRA_DB_KEYSPACE=your_astra_keyspace
+
 
 How It Works
 The application follows this flow:
@@ -27,18 +38,20 @@ User input is first processed through NeMo Guardrails
 Guardrails classify the query into different types (movie recommendations, general questions, etc.)
 Query Routing:
 
-Movie-related queries are directed to the SingleStore database
+Movie-related queries are directed to the DataStax Astra database
 General queries are handled directly by the OpenAI LLM
 Off-topic queries (politics, stock market) are filtered with appropriate responses
 Movie Recommendations:
 
-For movie queries, the system searches the SingleStore database
+For movie queries, the system searches the DataStax Astra database
 Results are ranked by relevance
 Top 10 recommendations are returned with relevance scores
+
 Usage
 Run the script:
 
 python movierec-swarm.py
+
 The system will start an interactive session where you can:
 
 Ask for movie recommendations
